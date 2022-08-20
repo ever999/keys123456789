@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex">
+    <div class="numbers"></div>
+    <div class='grid'>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+    </div>
+    </div>
+
+  <script>
+    btn = document.querySelectorAll('button')
+    nums = document.querySelector('.numbers')
+
+    Array.prototype.forEach.call(btn, function (toggleExtra, index) {
+        toggleExtra.addEventListener('click', function () {
+        
+        console.log(index+1);
+
+        var node = document.createTextNode(index+1);
+        nums.appendChild(node);
+
+        console.log(nums.textContent.length)
+        if(nums.textContent.length > 4){
+            nums.textContent = ''
+        }
+    })
+    });
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
