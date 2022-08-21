@@ -20,7 +20,7 @@ body {
     display: grid;
     justify-items: center;
     grid-template-columns: auto auto auto;
-    gap: 4rem 1rem;
+    gap: 4rem 4rem;
     /* width: 20rem; */
   }
   
